@@ -9,7 +9,7 @@ based on glomie's mod, remade by Zeg9 and reworked by TenPlus1.
 
 expertmm version changes:
 * (no other changes)
-* readme incorrectly called the mod [protect] where it should be [protector] according to the parent used by the lua scripts
+* readme incorrectly called the mod [protect] where it should be [protector] according to the parent used by the lua scripts and forum post https://forum.minetest.net/viewtopic.php?f=9&t=9376
 * fix crashes by doing nil checking
 
 https://forum.minetest.net/viewtopic.php?f=11&t=9376
