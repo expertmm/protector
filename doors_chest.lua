@@ -560,9 +560,12 @@ minetest.register_node("protector:chest", {
 			.. "listring[nodemeta:" .. spos .. ";main]"
 			.. "listring[current_player;main]"
 		if default ~= nil then
-			local got_hotbar = default.get_hotbar_bg(0,5)
-			if got_hotbar ~= nil then
-				formspec = formspec .. got_hotbar
+			local got_hotbar = nil
+			if default.get_hotbar_bg ~= nil then
+				got_hotbar = default.get_hotbar_bg(0,5)
+				if got_hotbar ~= nil then
+					formspec = formspec .. got_hotbar
+				end
 			end
 		end
 		minetest.show_formspec(
