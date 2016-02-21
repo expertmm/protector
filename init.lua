@@ -62,7 +62,7 @@ protector.generate_formspec = function(meta)
 	
 	local formspec = "size[8,7]"..
 		default.gui_bg..
-		default.gui_bg_img..
+		default.gui_bg_img
 	if default ~= nil and default.gui_slots ~= nil then
 		formspec = formspec .. default.gui_slots..
 	end
