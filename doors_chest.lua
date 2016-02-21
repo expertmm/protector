@@ -538,10 +538,16 @@ minetest.register_node("protector:chest", {
 		local meta = minetest.get_meta(pos)
 		local spos = pos.x .. "," .. pos.y .. "," ..pos.z
 		local formspec = "size[8,9]"
-			.. default.gui_bg
-			.. default.gui_bg_img
-		if default ~= nil and default.gui_slots ~= nil then
-			formspec = formspec .. default.gui_slots
+		if default ~= nil then
+			if default.gui_bg ~= nil then
+				formspec = formspec .. default.gui_bg
+			end
+			if default.gui_bg_img ~= nil then
+				formspec = formspec .. default.gui_bg_img
+			end
+			if default.gui_slots ~= nil then
+				formspec = formspec .. default.gui_slots
+			end
 		end
 		formspec = formspec
 			.. "list[nodemeta:".. spos .. ";main;0,0.3;8,4;]"
