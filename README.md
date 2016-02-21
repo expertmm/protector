@@ -1,10 +1,16 @@
-expertmm Protector mod [protect]
-based on Protector Redo mod [protect] by TenPlus1
+# protect
+expertmm Protector mod [protector]
+based on Protector Redo mod [protector] by TenPlus1
 
 Protector redo for minetest is a mod that protects a players builds by placing
 a block that stops other players from digging or placing blocks in that area.
 
 based on glomie's mod, remade by Zeg9 and reworked by TenPlus1.
+
+expertmm version changes:
+* (no other changes)
+* readme incorrectly called the mod [protect] where it should be [protector] according to the parent used by the lua scripts
+* fix crashes by doing nil checking
 
 https://forum.minetest.net/viewtopic.php?f=11&t=9376
 
