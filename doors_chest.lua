@@ -540,7 +540,10 @@ minetest.register_node("protector:chest", {
 		local formspec = "size[8,9]"
 			.. default.gui_bg
 			.. default.gui_bg_img
-			.. default.gui_slots
+		if default ~= nil and default.gui_slots ~= nil then
+			formspec = formspec .. default.gui_slots
+		end
+		formspec = formspec
 			.. "list[nodemeta:".. spos .. ";main;0,0.3;8,4;]"
 			.. "button[0,4.5;2,0.25;toup;To Chest]"
 			.. "field[2.3,4.8;4,0.25;chestname;;"
@@ -550,12 +553,16 @@ minetest.register_node("protector:chest", {
 			.. "list[current_player;main;0,6.08;8,3;8]"
 			.. "listring[nodemeta:" .. spos .. ";main]"
 			.. "listring[current_player;main]"
-			.. default.get_hotbar_bg(0,5)
-
-			minetest.show_formspec(
-				clicker:get_player_name(),
-				"protector:chest_" .. minetest.pos_to_string(pos),
-				formspec)
+		if default ~= nil then
+			local got_hotbar = default.get_hotbar_bg(0,5)
+			if got_hotbar ~= nil then
+				formspec = formspec .. got_hotbar
+			end
+		end
+		minetest.show_formspec(
+			clicker:get_player_name(),
+			"protector:chest_" .. minetest.pos_to_string(pos),
+			formspec)
 	end,
 
 	on_blast = function() end,

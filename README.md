@@ -1,4 +1,5 @@
-Protector Redo mod [protect]
+expertmm Protector mod [protect]
+based on Protector Redo mod [protect] by TenPlus1
 
 Protector redo for minetest is a mod that protects a players builds by placing
 a block that stops other players from digging or placing blocks in that area.

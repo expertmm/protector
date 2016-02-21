@@ -1,0 +1,16 @@
+Problems with 2016-02-20 github version of tenplus1/protector vs the 2016-02-20 github version of minetestserver:
+
+RIGHT-CLICK PROTECTOR BLOCK:
+
+2016-02-20 22:12:37: ERROR[Main]: ServerError: Lua: Runtime error from mod '' in callback item_OnPlace(): /usr/local/share/minetest/games/fca_game_a/mods/protector/init.lua:68: attempt to concatenate field 'gui_slots' (a nil value)
+2016-02-20 22:12:37: ERROR[Main]: stack traceback:
+2016-02-20 22:12:37: ERROR[Main]:       /usr/local/share/minetest/games/fca_game_a/mods/protector/init.lua:68: in function 'generate_formspec'
+2016-02-20 22:12:37: ERROR[Main]:       /usr/local/share/minetest/games/fca_game_a/mods/protector/init.lua:325: in function 'on_rightclick'
+2016-02-20 22:12:37: ERROR[Main]:       /usr/local/share/minetest/builtin/game/item.lua:332: in function </usr/local/share/minetest/builtin/game/item.lua:325>
+
+RIGHT CLICK PROTECTED CHEST:
+
+2016-02-20 22:59:28: ERROR[Main]: ServerError: Lua: Runtime error from mod '' in callback item_OnPlace(): /usr/local/share/minetest/games/fca_game_a/mods/protector/doors_chest.lua:553: attempt to call field 'get_hotbar_bg' (a nil value)
+2016-02-20 22:59:28: ERROR[Main]: stack traceback:
+2016-02-20 22:59:28: ERROR[Main]:       /usr/local/share/minetest/games/fca_game_a/mods/protector/doors_chest.lua:553: in function 'on_rightclick'
+2016-02-20 22:59:28: ERROR[Main]:       /usr/local/share/minetest/builtin/game/item.lua:332: in function </usr/local/share/minetest/builtin/game/item.lua:325>
