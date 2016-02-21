@@ -60,11 +60,17 @@ end
 
 protector.generate_formspec = function(meta)
 	
-	local formspec = "size[8,7]"..
-		default.gui_bg..
-		default.gui_bg_img
-	if default ~= nil and default.gui_slots ~= nil then
-		formspec = formspec .. default.gui_slots
+	local formspec = "size[8,7]"
+	if default ~= nil then
+		if default.gui_slots ~= nil then
+			formspec = formspec .. default.gui_bg
+		end
+		if default.gui_slots ~= nil then
+			formspec = formspec .. default.gui_bg_img
+		end
+		if default.gui_slots ~= nil then
+			formspec = formspec .. default.gui_slots
+		end
 	end
 	formspec = formspec .. "label[2.5,0;-- Protector interface --]"
 		.."label[0,1;PUNCH node to show protected area or USE for area check]"
