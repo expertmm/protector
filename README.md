@@ -7,11 +7,12 @@ a block that stops other players from digging or placing blocks in that area.
 
 based on glomie's mod, remade by Zeg9 and reworked by TenPlus1.
 
-expertmm version changes:
+### expertmm version changes:
 * (no other changes)
 * readme incorrectly called the mod [protect] where it should be [protector] according to the parent used by the lua scripts and forum post https://forum.minetest.net/viewtopic.php?f=9&t=9376
 * fix crashes by doing nil checking
-* The problem was happening when using 0.4.9's mods on a 2016-02-20 github version of tenplus1/protector vs the 2016-02-20 github version of minetestserver, so the issue may be invalid (only happen during misconfiguration), or only happen on 0.4.9 (not verified).
+#### Reason for fork
+The problem was happening when using 0.4.9's mods on a 2016-02-20 github version of tenplus1/protector vs the 2016-02-20 github version of minetestserver, so the issue may be invalid (only happen during misconfiguration), or only happen on 0.4.9 (not verified).
 
 https://forum.minetest.net/viewtopic.php?f=11&t=9376
 
